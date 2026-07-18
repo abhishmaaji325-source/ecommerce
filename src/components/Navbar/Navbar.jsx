@@ -7,7 +7,7 @@ import {
   FaUser,
   FaSearch,
 } from "react-icons/fa";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/cartContext";
 
 const Navbar = () => {
   const { cartCount } = useContext(CartContext);
