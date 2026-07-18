@@ -1,0 +1,38 @@
+.deal {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.deal-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.deal-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.deal-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .deal-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 576px) {
+  .deal-products {
+    grid-template-columns: 1fr;
+  }
+}

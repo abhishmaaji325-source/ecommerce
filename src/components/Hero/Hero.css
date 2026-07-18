@@ -1,0 +1,170 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* Banner Image */
+
+.hero-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark Overlay */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text Content */
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+
+  max-width: 520px;
+
+  color: white;
+
+  z-index: 2;
+
+  text-align: left;
+}
+
+/* Tag */
+
+.hero-tag {
+  display: inline-block;
+  padding: 10px 22px;
+
+  background: #7c3aed;
+  color: white;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+/* Heading */
+
+.hero-overlay h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-weight: 800;
+
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Highlighted Text */
+
+.hero-overlay h1 span {
+  color: #fbbf24;
+}
+
+/* Paragraph */
+
+.hero-overlay p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+
+  color: #f3f4f6;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.shop-btn,
+.explore-btn {
+  padding: 16px 35px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Shop Button */
+
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  background-color: white;
+  color: rgb(21, 25, 49);
+}
+
+.shop-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Explore Button */
+
+.explore-btn {
+  background: white;
+  color: #111827;
+}
+
+.explore-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-overlay {
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 42px;
+  }
+
+  .hero-overlay p {
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
