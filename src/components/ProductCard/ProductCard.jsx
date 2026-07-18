@@ -1,7 +1,7 @@
 import "./ProductCard.css";
 import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import { useContext, useState } from "react";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/cartContext";
 
 const ProductCard = ({ product }) => {
 
