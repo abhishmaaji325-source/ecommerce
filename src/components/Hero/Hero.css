@@ -136,7 +136,9 @@
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive */
+/* ===========================
+   Tablet
+=========================== */
 
 @media (max-width: 768px) {
 
@@ -144,14 +146,17 @@
     height: 70vh;
   }
 
+  /* Show more of the left side image */
+  .hero-banner {
+    object-position: left center;
+  }
+
   .hero-overlay {
     left: 5%;
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-
     max-width: 100%;
-
     text-align: center;
   }
 
@@ -167,4 +172,58 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: 65vh;
+  }
+
+  /* Move image further left for phones */
+  .hero-banner {
+    object-position: 20% center;
+  }
+
+  .hero-tag {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+  }
+
+  .hero-overlay {
+    left: 5%;
+    right: 5%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .hero-overlay p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .shop-btn,
+  .explore-btn {
+    width: 220px;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
 }
